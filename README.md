@@ -2,14 +2,14 @@
 ### Version: 0.0.3.5
 Before you read this, we suggest that you read the "LICENSE" file first.
 
-##What is RandMegan? 
+## What is RandMegan? 
 RandMegan is a Python Random Package, that uses mostly Cryptography. RandMegan is purposed to be lightweight, and RandMegan is purposed for random functionalities, independent of Python's built-in Random Module.
 
-##In Development Notice: 
+## In Development Notice: 
 We would like to inform you that RandMegan is new, and RandMegan is in the Early Access phase of its development; RandMegan may sometimes contain bugs (some of the bugs can
 be awkward) and glitches. If you encounter any bugs and glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.com" for inquiries about RandMegan.
 
-##How do you use RandMegan?
+## How do you use RandMegan?
 There are a few functionalities we would cover for RandMegan, and it may not be limited to just the functionalities mentioned.
 
 The first example we would cover is how to import it. Say, for example, you have the package, and your main Python file through mentioned paths:
