@@ -1,11 +1,11 @@
 # RandMegan
-### Version: 0.0.3.5
+### Version: 0.0.3.6
 Before you read this, we suggest that you read the "LICENSE" file first.
 
-## What is RandMegan? 
+## What is RandMegan?
 RandMegan is a Python Random Package, that uses mostly Cryptography. RandMegan is purposed to be lightweight, and RandMegan is purposed for random functionalities, independent of Python's built-in Random Module.
 
-## In Development Notice: 
+## In Development Notice:
 We would like to inform you that RandMegan is new, and RandMegan is in the Early Access phase of its development; RandMegan may sometimes contain bugs (some of the bugs can
 be awkward) and glitches. If you encounter any bugs and glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.com" for inquiries about RandMegan.
 
@@ -70,14 +70,14 @@ The Plusified variant of the Choose Random:
 ```
 ...
 List = ["Pizza", "Chocolate", "Custard", "Pasta", "Poultry", "Beef", "Oxtail"]
-Lima = RandMegan.choose_plusified(List)
+Lima = RandMegan.chooseplusified(List)
 #First shuffles the index, then chooses a random selection from the list. This can be beneficial if you also look for an unpredictable index return value.
 print(Lima)
 ```
 and the Random Bytes method:
 ```
 ...
-print(RandMegan.Random_bytes(10))
+print(RandMegan.RandomBytes(10))
 #Returns 10 random byte (Machine Code) values
 ```
 We know that this is short information, but as mentioned, RandMegan is in the in-development phase, and we will be adding or rebalancing as we progress with the development of RandMegan.
