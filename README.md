@@ -3,7 +3,7 @@
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
-RandMegan is a Python Random Package, that uses mostly Cryptography. RandMegan is purposed to be lightweight, and RandMegan is purposed for random functionalities, independent of Python's built-in Random Module.
+RandMegan is a Python Random Package, that uses mostly Cryptography. RandMegan is purposed to be lightweight, and RandMegan is purposed for random functionalities, almost independent of Python's built-in Random Module.
 
 ## In Development Notice:
 We would like to inform you that RandMegan is new, and RandMegan is in the Early Access phase of its development; RandMegan may sometimes contain bugs (some of the bugs can
@@ -14,8 +14,7 @@ There are a few functionalities we would cover for RandMegan, and it may not be 
 
 The first example we would cover is how to import it. Say, for example, you have the package, and your main Python file through mentioned paths:
 ```
-.\\Project\\RandMegan\\__init__.py
-.\\Project\\RandMegan\\randy.py
+.\\Project\\RandMegan
 .\\Project\\Project.py
 ```
 You want RandMegan to be imported through 'Project.py'. It can be as simple as using:
@@ -30,7 +29,7 @@ Here are two examples of how to do it:
 ```
 import RandMegan
 print(RandMegan.intrandom(0, 10))
-#Returns a random integer. No errors would occur
+#Returns a random integer between 0 to 10. No errors would occur
 ```
 ```
 import RandMegan
@@ -80,6 +79,32 @@ and the Random Bytes method:
 print(RandMegan.RandomBytes(10))
 #Returns 10 random byte (Machine Code) values
 ```
+In addition, we have the Integer Random Below functionality in one perspective:
+```
+...
+print(intrandombelow(10))
+# returns and prints a random integer on a range from 0 to 10
+```
+
+There is one thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
+```
+...
+C = intrandom(20, 10)
+# This causes an exception
+```
+The error Message would occur as follows:
+```
+...
+(20 >= 10) The minimum value should not be higher nor equal to maximum value. 
+Did you mean to use 'intrandom(10, 20)' instead?
+```
+Gladly, exceptions are there to guide you, in case you make a Syntax or Value Error. In this case,
+you would have to recode the accident mentioned to as follows:
+```
+...
+C = intrandom(10, 20)
+# The fixed version of the one that caused an exception
+```
 We know that this is short information, but as mentioned, RandMegan is in the in-development phase, and we will be adding or rebalancing as we progress with the development of RandMegan.
 
-Continue Playing.
+We wish you all the best, and please, stay secure.
