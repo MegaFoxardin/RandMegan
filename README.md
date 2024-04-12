@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.3.6
+### Version: 0.0.3.8
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -28,25 +28,25 @@ Another example is when you imported it, how can you use its random integer gene
 Here are two examples of how to do it:
 ```
 import RandMegan
-print(RandMegan.intrandom(0, 10))
+print(RandMegan.intRandom(0, 10))
 #Returns a random integer between 0 to 10. No errors would occur
 ```
 ```
 import RandMegan
-print(RandMegan.intrandomplus(0, [1, 2, 3, 4, 5, 6]))
+print(RandMegan.intRandomPlus(0, [1, 2, 3, 4, 5, 6]))
 #Also returns a random integer, just a bit more complex than the other one. It uses the length of the List
 #if you are a person who likes to be complicated with your code, you at least have the option to do so.
 ```
 In retrospect, that is not all you can do with RandMegan; you also have a random boolean function. How you can use it is as follows:
 ```
 import RandMegan
-print(RandMegan.boolrandom())
+print(RandMegan.boolRandom())
 #Returns either "True" or "False" at random.
 ```
 In addition, we also have the Random Character selection for a string:
 ```
 import RandMegan
-print(RandMegan.strandom("HI THERE!"))
+print(RandMegan.stRandom("HI THERE!"))
 #Selects a random character from a String.
 ```
 Another addition is the Shuffle functionality, and this is beneficial for gamers who like card games:
@@ -61,7 +61,7 @@ In addition to the Choose Random functionality:
 ```
 import RandMegan #Assuming you already did that.
 List = ["Pac-Man", "Tetris", "Blackjack", "Space Invaders"]
-print(RandMegan.chooserandom(List)
+print(RandMegan.chooseRandom(List)
 # Select a Random index, to get the random value.
 #The Choose Random functionality can work with any variable values in the list. However, using the non-plusified variant is predictable with its index.
 ```
@@ -69,7 +69,7 @@ The Plusified variant of the Choose Random:
 ```
 ...
 List = ["Pizza", "Chocolate", "Custard", "Pasta", "Poultry", "Beef", "Oxtail"]
-Lima = RandMegan.chooseplusified(List)
+Lima = RandMegan.choosePlusified(List)
 #First shuffles the index, then chooses a random selection from the list. This can be beneficial if you also look for an unpredictable index return value.
 print(Lima)
 ```
@@ -81,28 +81,41 @@ print(RandMegan.RandomBytes(10))
 ```
 In addition, we have the Integer Random Below functionality in one perspective:
 ```
-...
-print(intrandombelow(10))
+from RandMegan import *
+print(intRandomBelow(10))
 # returns and prints a random integer on a range from 0 to 10
+```
+Not only do we have random functions in it, we also have the 
+Negativify Function:
+```
+from RandMegan import *
+C = Negativify(100)
+# This returns -100 as its integer value
+```
+and the Power of Function:
+```
+from RandMegan import *
+C = Power(2, 10)
+# This returns 2 to the power of 10, which is 1024
 ```
 
 There is one thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
 ```
 ...
-C = intrandom(20, 10)
+C = intRandom(20, 10)
 # This causes an exception
 ```
 The error Message would occur as follows:
 ```
 ...
 (20 >= 10) The minimum value should not be higher nor equal to maximum value. 
-Did you mean to use 'intrandom(10, 20)' instead?
+Did you mean to use 'intRandom(10, 20)' instead?
 ```
 Gladly, exceptions are there to guide you, in case you make a Syntax or Value Error. In this case,
 you would have to recode the accident mentioned to as follows:
 ```
 ...
-C = intrandom(10, 20)
+C = intRandom(10, 20)
 # The fixed version of the one that caused an exception
 ```
 We know that this is short information, but as mentioned, RandMegan is in the in-development phase, and we will be adding or rebalancing as we progress with the development of RandMegan.
