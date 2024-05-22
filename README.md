@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.3.8
+### Version: 0.0.3.9
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -84,6 +84,12 @@ In addition, we have the Integer Random Below functionality in one perspective:
 from RandMegan import *
 print(intRandomBelow(10))
 # returns and prints a random integer on a range from 0 to 10
+```
+and the Random Hex in the other:
+```
+from RandMegan import *
+print(RandomHex(10)
+# returns a random hex value of 20 digits.
 ```
 Not only do we have random functions in it, we also have the 
 Negativify Function:
