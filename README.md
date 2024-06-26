@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.3.10
+### Version: 0.0.3.11
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -112,6 +112,20 @@ from RandMegan import *
 print(RandUrlsafePlus(10))
 # returns and prints a randomly generated URL of a random integer between 1 and 10 bytes.
 ```
+In addition, we also have the randBitArray function:
+```
+from RandMegan import *
+x = randBitArray(10)
+# Creates a bit Array of 10 Bits at random values.
+```
+and the randBits function:
+```
+from RandMegan import *
+x = randBits(10)
+# Creates a string, containing 10 Bits at random values.
+```
+The two functionalities mentioned can possibly be useful, if you want to use Quantum Functionalities on the Crypto Side.
+
 Not only do we have random functions in it, we also have the 
 Negativify Function:
 ```
@@ -133,6 +147,7 @@ C = Negativify(0, True)
 # Without the True value on the second parameter, the function will give you a Syntax Warning. In this example,
 # The Syntax Warning is Suppressed from raising.
 ```
+
 There is one thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
 ```
 ...
