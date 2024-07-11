@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.3.11
+### Version: 0.0.3.12
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -10,6 +10,12 @@ lightweight, and RandMegan is purposed for random functionalities, almost indepe
 We would like to inform you that RandMegan is new, and RandMegan is in the Early Access phase of its development; 
 RandMegan may sometimes contain bugs (some of the bugs can be awkward) and glitches. If you encounter any bugs and 
 glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.com" for inquiries about RandMegan.
+
+## How Much Storage do you require for RandMegan?
+Now some people may ponder of how much storage, RandMegan requires, and you might be surprised, for it does not require
+much storage. Storage Requirements are as follows, but not limited to:
+- (Binary Format) 9.46 KB
+- (Decimal Format) 9.696 KB
 
 ## How do you use RandMegan?
 There are a few functionalities we would cover for RandMegan, and it may not be limited to just the functionalities 
@@ -125,6 +131,27 @@ x = randBits(10)
 # Creates a string, containing 10 Bits at random values.
 ```
 The two functionalities mentioned can possibly be useful, if you want to use Quantum Functionalities on the Crypto Side.
+
+In addition, we also have the method to generate a random password for you:
+```
+from RandMegan import *
+x = TokenPassword(16)
+# Generates a 16 Character password, including all the characters in the ASCII part.
+
+XX = TokenPassword(16, True)
+# Generates a 16 Character password, excluding special characters.
+
+XXX = TokenPassword(16, Exclude_Digits=True)
+# Generates a 16 Character password, excluding Digits.
+
+XXXX = TokenPassword(16, True, True)
+# Generates a 16 Character password, excluding special characters, and excluding Digits.
+
+print(x)
+print(XX)
+print(XXX)
+print(XXXX)
+```
 
 Not only do we have random functions in it, we also have the 
 Negativify Function:
