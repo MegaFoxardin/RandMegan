@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.3.13
+### Version: 0.0.4.0
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -14,7 +14,7 @@ glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.co
 ## How Much Storage do you require for RandMegan?
 Now some people may ponder of how much storage, RandMegan requires, and you might be surprised, for it does not require
 much storage. Storage Requirements are as follows, but not limited to:
-- (Binary Format) Approximately 11.4 KB
+- (Binary Format) Approximately 12.4 KB
 - (Decimal Format) 11.698 KB
 
 ## What version of Python is required at minimum for RandMegan?
@@ -177,7 +177,7 @@ x = TokenPassword(16)
 XX = TokenPassword(16, True)
 # Generates a 16 Character password, excluding special characters.
 
-XXX = TokenPassword(16, Exclude_Digits=True)
+XXX = TokenPassword(16, ExcludeNum=True)
 # Generates a 16 Character password, excluding Digits.
 
 XXXX = TokenPassword(16, True, True)
