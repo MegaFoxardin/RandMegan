@@ -1,9 +1,9 @@
 # RandMegan
-### Version: 0.0.4.0
+### Version: 0.0.4.1
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
-RandMegan is a Python Random Package, that is a Cryptographically Secure Random Generator. RandMegan is purposed to be 
+RandMegan is a Python Random Package, that is a MegaTron Random Generator. RandMegan is purposed to be 
 lightweight, and RandMegan is purposed for random functionalities, independent of Python's built-in Secrets Module.
 
 ## Notice:
@@ -14,14 +14,23 @@ glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.co
 ## How Much Storage do you require for RandMegan?
 Now some people may ponder of how much storage, RandMegan requires, and you might be surprised, for it does not require
 much storage. Storage Requirements are as follows, but not limited to:
-- (Binary Format) Approximately 12.4 KB
-- (Decimal Format) 11.698 KB
+- (Binary Format) Approximately 8.83 KB
+- (Decimal Format) 9.047 KB
 
 ## What version of Python is required at minimum for RandMegan?
 Now some people may or may not ponder on what Python Version does RandMegan require, which is understandable,
 for some companies sticks to one version, and other companies keep their versions up-to-date. In this case
 RandMegan requires a Python Version of, but not limited to:
 - Python 3.12+
+
+## What is a MegaTron Random Generator?
+MegaTron Random Generator (MTRNG) is a Random Generator that its primary return strategy is based on Natural Phenomena,
+which is the same return strategy as a Cryptographicy Secure Random Generator (CSPRNG), which is unpredictable. If a MegaTron
+Random Generator noticed the Cryptography is exhausted, it goes towards a backup Random Generator; The Operating System
+Entropy Random Generator (URNG or TRNG) is dependent on the Operating System and hardware for true randomness. If the device got 
+exhausted with its Entropy, then the backup of backup is the Pseudo Random Generator (Either the Mersene Twister, or 
+Uniformly Distributed Random Generator) This makes MegaTron Random Generator have three (3) plans, to make sure that 
+it is highly secure from being exhausted.
 
 ## How do you use RandMegan?
 There are a few functionalities we would cover for RandMegan, and it may not be limited to just the functionalities 
@@ -48,7 +57,10 @@ print(RandMegan.intRandom(0, 10))
 # Returns a random integer between 0 to 10. No errors would occur
 
 x = RandMegan.intRandom()
-# Uses the Default Entropy to return a random integer of between 1 to 64.
+# Uses the Default Entropy to return a random integer of between 1 to 128.
+
+y = RandMegan.intRandom(-128)
+# Uses the Default Entropy to return a random integer of between -128 to 128.
 ```
 ```
 import RandMegan
@@ -57,7 +69,7 @@ print(RandMegan.intRandomPlus(0, [1, 2, 3, 4, 5, 6]))
 # if you are a person who likes to be complicated with your code, you at least have the option to do so.
 
 X = RandMegan.intRandomPlus()
-# Uses the Default Entropy to create the max value, and to return a random integer of between 1 to 64.
+# Uses the Default Entropy to create the max value, and to return a random integer of between 1 to 128.
 ```
 In retrospect, that is not all you can do with RandMegan; you also have a random boolean function. How you can use it 
 is as follows:
@@ -81,7 +93,7 @@ List = RandMegan.Shuffle(List)
 # that type of Shuffle?
 
 List2 = RandMegan.Shuffle()
-# Uses the Default Entropy to create a list of 64 integer values, and then returns a shuffled version of it
+# Uses the Default Entropy to create a list of 128 integer values, and then returns a shuffled version of it
 print(List)
 ```
 In addition to the Choose Random functionality:
@@ -109,13 +121,13 @@ print(RandMegan.RandomBytes(10))
 #Returns 10 random byte (Machine Code) values and prints it out
 
 x = RandMegan.RandomBytes()
-# uses the Default Entropy to return 64 random bytes
+# uses the Default Entropy to return 128 random bytes
 ```
 In addition, we have the Integer Random Below functionality in one perspective:
 ```
 from RandMegan import *
 print(intRandomBelow(10))
-# returns and prints a random integer on a range from 0 to 10
+# returns and prints a random integer on a range from 0 to 9
 
 x = intRandomBelow()
 # uses the Default Entropy to return a random integer on a range from 0 to 127.
@@ -127,7 +139,7 @@ print(RandomHex(10))
 # returns and prints a random hex value of 20 digits.
 
 x = RandomHex()
-# Uses the Default Entropy to return 128 digits of a random hex value.
+# Uses the Default Entropy to return 256 digits of a random hex value.
 ```
 We also have a Random URL Generator:
 ```
@@ -136,7 +148,7 @@ print(RandUrlsafe(10))
 # returns and prints a randomly generated URL of 10 bytes.
 
 x = RandUrlsafe()
-# Uses the Default Entropy to generate a random URL of 64 bytes.
+# Uses the Default Entropy to generate a random URL of 128 bytes.
 ```
 or if you want to use the plusified version, which returns between 1, and maximum amount of bytes,
 in a Random URL Generator:
@@ -146,7 +158,7 @@ print(RandUrlsafePlus(10))
 # returns and prints a randomly generated URL of a random integer between 1 and 10 bytes.
 
 x = RandUrlsafePlus()
-# Uses the Default Entropy to return a range, of randomly between 1 and 64 bytes of a randomly generated URL
+# Uses the Default Entropy to return a range, of randomly between 1 and 128 bytes of a randomly generated URL
 ```
 In addition, we also have the randBitArray function:
 ```
@@ -155,7 +167,7 @@ x = randBitArray(10)
 # Creates a bit Array of 10 Bits at random values.
 
 xx = randBitArray()
-# Uses the Default Entropy to return an array of 64 Bits at random values.
+# Uses the Default Entropy to return an array of 128 Bits at random values.
 ```
 and the randBits function:
 ```
@@ -164,9 +176,15 @@ x = randBits(10)
 # Creates a string, containing 10 Bits at random values.
 
 xx = randBits()
-# Uses the Default Entropy to return a String, containing 64 Bits at random values.
+# Uses the Default Entropy to return a String, containing 128 Bits at random values.
+
+y = randSuperBits(12)
+# Returns 12 bits, into machine code, by encoding the bit string into a buffed string, and then converting it into bytes.
+
+y = randSuperBits()
+# Uses the Default Entropy (128) amount of bits, and turn it into machine code, as how we stated with the previous variable.
 ```
-The two functionalities mentioned can possibly be useful, if you want to use Quantum Functionalities on the Crypto Side.
+The four functionalities mentioned can possibly be useful, depending on what you need it for.
 
 In addition, we also have the method to generate a random password for you:
 ```
@@ -174,23 +192,11 @@ from RandMegan import *
 x = TokenPassword(16)
 # Generates a 16 Character password, including all the characters in the ASCII part.
 
-XX = TokenPassword(16, True)
-# Generates a 16 Character password, excluding special characters.
-
-XXX = TokenPassword(16, ExcludeNum=True)
-# Generates a 16 Character password, excluding Digits.
-
-XXXX = TokenPassword(16, True, True)
-# Generates a 16 Character password, excluding special characters, and excluding Digits.
-
-XXXXX = TokenPassword()
-# Uses the Default Entropy to generate a 64 Character Password.
+XX = TokenPassword()
+# Uses the Default Entropy to generate a 128 Character Password.
 
 print(x)
 print(XX)
-print(XXX)
-print(XXXX)
-print(XXXXX)
 ```
 
 Now, some people may or may not ponder, "What about the people that plays Roleplaying Games that uses Dice, and they
@@ -201,24 +207,38 @@ from RandMegan import *
 
 Player1_Dice = RandDice4()
 # Rolls the Dice value, randomly between 1 and 4
+Player1_Dice = RandDice4(4)
+# Rolls the Dice value, randomly between 4 and 16. This is if you have multiple dices to roll
 
 Player2_Dice = RandDice6()
 # Rolls the Dice value, randomly between 1 and 6
+Player2_Dice = RandDice6(4)
+# Rolls the Dice value, randomly between 4 and 24. This is if you have multiple dices to roll
 
 Player3_Dice = RandDice8()
 # Rolls the Dice value, randomly between 1 and 8
+Player3_Dice = RandDice8(5)
+# Rolls the Dice value, randomly between 5 and 40.
 
 Player4_Dice = RandDice10()
 # Rolls the Dice value, randomly between 1 and 10
+Player4_Dice = RandDice10(10)
+# Rolls the Dice value, randomly between 10 and 100.
 
 Player5_Dice = RandDice12()
 # Rolls the Dice value, randomly between 1 and 12
+Player5_Dice = RandDice12(10)
+# Rolls the Dice value, randomly between 10 and 144.
 
 Player6_Dice = RandDice16()
 # Rolls the Dice value, randomly between 1 and 16
+Player6_Dice = RandDice16(20)
+# Rolls the Dice value, randomly between 20 and 320.
 
 Player7_Dice = RandDice20()
 # Rolls the Dice value, randomly between 1 and 20
+Player7_Dice = RandDice20(100)
+# Rolls the Dice value, randomly between 100 and 2000. (Do you have big hands?)
 
 # Take note that those are functions, not classes
 ```
@@ -235,6 +255,15 @@ xX = RandColour(25, 99)
 # Generates a random colour tuple of each value randomly between 25 to 99.
 ```
 
+Looking for Random Colour for TKinter to use? We also have that added in. Here is an example of how it works:
+```
+from RandMegan import *
+
+x = RandTKColour()
+# Generates a random hex of a colour for TKinter to be able to use.
+
+```
+
 Not only do we have random functions in it, we also have the 
 Negativify Function:
 ```
@@ -248,16 +277,8 @@ from RandMegan import *
 C = Power(2, 10)
 # This returns 2 to the power of 10, which is 1024
 ```
-Let's say for example, that you want to use the Negativify Function, with the Warnings and Errors Suppressed.
-You can do so, and here is an example of how to do it:
-```
-from RandMegan import *
-C = Negativify(0, True)
-# Without the True value on the second parameter, the function will give you a Syntax Warning. In this example,
-# The Syntax Warning is Suppressed from raising.
-```
 
-There is one thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
+There is another thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
 ```
 ...
 C = intRandom(20, 10)
