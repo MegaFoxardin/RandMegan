@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.4.1
+### Version: 0.0.5.0
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
