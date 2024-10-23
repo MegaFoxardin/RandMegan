@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.0.5.0
+### Version: 0.1.0.0
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -14,8 +14,8 @@ glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.co
 ## How Much Storage do you require for RandMegan?
 Now some people may ponder of how much storage, RandMegan requires, and you might be surprised, for it does not require
 much storage. Storage Requirements are as follows, but not limited to:
-- (Binary Format) Approximately 42.83 MB
-- (Decimal Format) 46.5 MB
+- (Binary Format) Approximately 20.00 MB
+- (Decimal Format) 20.15 KB
 
 ## What version of Python is required at minimum for RandMegan?
 Now some people may or may not ponder on what Python Version does RandMegan require, which is understandable,
@@ -25,8 +25,8 @@ RandMegan requires a Python Version of, but not limited to:
 
 ## What is a MêgaTron Random Generator?
 MêgaTron Random Generator (MTRNG) is a Random Generator that its primary return strategy is based on Natural Phenomena,
-which is the same return strategy as a Cryptographically Secure Random Generator (CSPRNG), which is unpredictable. If a
-MêgaTron Random Generator noticed the Cryptography is exhausted, its second layer take over, and that goes towards a
+which is the same return strategy as a Cryptographically Secure Random Generator (CSPRNG), which is unpredictable and secure. 
+If a MêgaTron Random Generator noticed the Cryptography is exhausted, its second layer take over, and that goes towards a
 backup Random Generator; The Operating System Entropy Random Generator (URNG or TRNG) is dependent on the Operating
 System and hardware for true randomness. If the device got exhausted with its Entropy, then the third layer is its
 last attempt before it is truly exhausted, and that is the Pseudo Random Generator (Either the Mersene Twister, or
@@ -44,7 +44,7 @@ Due to MTRNG being a very recent Random Generator, the information about it is s
 cryptographers do not know much about it.
 What Purposes are MêgaTron Random Generator useful for? There are a few it can be quite useful for:
 - Game Development
-- Cryptographic Random Generations
+- Cryptographically Secure Random Generations
 - Dice Rolls
 - Low to Medium Security Required Development
 - Crypto Mining (Even though, I would not recommend it, because Crypto Mining can be risky)
@@ -52,6 +52,7 @@ What Purposes are MêgaTron Random Generator useful for? There are a few it can 
 - Chess Engines that works on random openings (For example, Leela Chess Zero)
 - Disco Displays
 - Card Games
+- Random Binary Code
 
 ## How do you use RandMegan?
 There are a few functionalities we would cover for RandMegan, and it may not be limited to just the functionalities
