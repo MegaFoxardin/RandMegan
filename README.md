@@ -1,5 +1,5 @@
 # RandMegan
-### Version: 0.1.0.0
+### Version: 0.1.1.0
 Before you read this, we suggest that you read the "LICENSE" file first.
 
 ## What is RandMegan?
@@ -14,24 +14,25 @@ glitches, you can contact Foxy CS (Anonymous) via Email: "foxrobinleela@gmail.co
 ## How Much Storage do you require for RandMegan?
 Now some people may ponder of how much storage, RandMegan requires, and you might be surprised, for it does not require
 much storage. Storage Requirements are as follows, but not limited to:
-- (Binary Format) Approximately 20.00 MB
-- (Decimal Format) 20.15 KB
+- (Binary Format) Approximately 22.00 KB
+- (Decimal Format) 22.25 KB
 
 ## What version of Python is required at minimum for RandMegan?
 Now some people may or may not ponder on what Python Version does RandMegan require, which is understandable,
 for some companies sticks to one version, and other companies keep their versions up-to-date. In this case
 RandMegan requires a Python Version of, but not limited to:
-- Python 3.12+
+- Python 3.13+
 
 ## What is a MêgaTron Random Generator?
-MêgaTron Random Generator (MTRNG) is a Random Generator that its primary return strategy is based on Natural Phenomena,
-which is the same return strategy as a Cryptographically Secure Random Generator (CSPRNG), which is unpredictable and secure. 
-If a MêgaTron Random Generator noticed the Cryptography is exhausted, its second layer take over, and that goes towards a
-backup Random Generator; The Operating System Entropy Random Generator (URNG or TRNG) is dependent on the Operating
-System and hardware for true randomness. If the device got exhausted with its Entropy, then the third layer is its
-last attempt before it is truly exhausted, and that is the Pseudo Random Generator (Either the Mersene Twister, or
-Uniformly Distributed Random Generator) This makes MegaTron Random Generator have three (3) plans, to make sure that
-it is highly stable from being exhausted.
+MêgaTron Random Generator (MTRNG) is a Random Generator that its primary return strategy is based on 
+Natural Phenomena (Of which uses random bytes) which is the same return strategy as a 
+Cryptographically Secure Random Generator (CSPRNG), which is unpredictable and secure. 
+If a MêgaTron Random Generator noticed the Cryptography is exhausted, its second layer take over, and that goes towards 
+a backup Random Generator; The Operating System Entropy Random Generator (TRNG) is dependent 
+on the Operating System and hardware for true randomness. If the device got exhausted with its 
+Entropy, then the third layer is its last attempt before it is truly exhausted, and that is the 
+Pseudo Random Generator (Either the Mersene Twister, or Uniformly Distributed Random Generator) This 
+makes MegaTron Random Generator have three (3) plans, to make sure that it is highly stable from being exhausted.
 
 Is MêgaTron Random Generator Stable? Yes, its process of randomness is just a bit slower.
 Is MêgaTron Random Generator Cryptographically secure? Yes, it is.
@@ -46,13 +47,14 @@ What Purposes are MêgaTron Random Generator useful for? There are a few it can 
 - Game Development
 - Cryptographically Secure Random Generations
 - Dice Rolls
-- Low to Medium Security Required Development
+- Low to High Security Required Development
 - Crypto Mining (Even though, I would not recommend it, because Crypto Mining can be risky)
 - Cryptographic Algorithms for Game Development purposes
 - Chess Engines that works on random openings (For example, Leela Chess Zero)
 - Disco Displays
 - Card Games
 - Random Binary Code
+- Card Games
 
 ## How do you use RandMegan?
 There are a few functionalities we would cover for RandMegan, and it may not be limited to just the functionalities
@@ -214,7 +216,7 @@ y = randBytesPlus()
 # Uses the Default Max Value (256) amount of bytes, and turn it into machine code, as how we stated with the previous 
 # variable.
 ```
-The four functionalities mentioned can possibly be useful, depending on what you need it for.
+The four functionalities mentioned can be useful, depending on what you need it for.
 
 In addition, we also have the method to generate a random password for you:
 ```
@@ -286,6 +288,9 @@ Player10_Dice = RandDice32()
 Player11_Dice = RandDice36()
 # Rolls the Dice value, randomly between 1 and 36
 
+Player11_Dice = RandDice40()
+# Rolls the Dice value, randomly between 1 and 40
+
 # Take note that those are functions, not classes
 ```
 
@@ -324,7 +329,7 @@ C = Power(2, 10)
 # This returns 2 to the power of 10, which is 1024
 ```
 
-There is another thing to note: Let's say for example, you make a mistake in your code, by generating a random number. For example:
+There is another thing to note: For example, you make a mistake in your code, by generating a random number. For example:
 ```
 ...
 C = intRandom(20, 10)
@@ -337,14 +342,13 @@ The error message would occur as follows:
 Did you mean to use 'intRandom(10, 20)' instead?
 ```
 Gladly, exceptions are there to guide you, in case you make a Syntax or Value Error. In this case,
-you would have to recode the accident mentioned to as follows:
+you would have to recode the accident mentioned as follows:
 ```
 ...
 C = intRandom(10, 20)
 # The fixed version of the one that caused an exception
 ```
-In addition, there is a function called "Panic" if you want to raise either an error or a warning, if something went
-wrong. Here are two examples of how to use it:
+In addition, if something goes wrong, there is a function called "Panic" if you want to raise either an error or a warning. Here are two examples of how to use it:
 ```
 from RandMegan import *
 C = Negativify(-1)
